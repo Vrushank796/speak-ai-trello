@@ -109,11 +109,11 @@ To use Speak AI Trello:
        ```
     
    - DELETE ```localhost:8000/api/card/6480ea782f7248e4e49d81d0```
-    - This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. id=1).
-    - First, it would delete card using Trello API endpoint ```https://api.trello.com/1/cards/${cardId}?key=${APIKey}&token=${APIToken}``` and then delete the card details in MongoDB database named **speakAiDB**, collection named **cards**.
-    - A successful DELETE request typically returns a 200 OK, or 204 No Content response code.
-    Request Headers
-    ```Cookie: loginToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2I3YWQ5YzgwN2JkNjJiNzlhMjhlNCIsInVzZXJuYW1lIjoidnJ1c2hhbmthbWluIiwiaWF0IjoxNjg2MTcwMDkzfQ.-6ON1g-AoszpoRjRsS2EF-usL0e2gswSjNylXZtxL_E```
+       - This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. id=1).
+       - First, it would delete card using Trello API endpoint ```https://api.trello.com/1/cards/${cardId}?key=${APIKey}&token=${APIToken}``` and then delete the card details in MongoDB database named **speakAiDB**, collection named **cards**.
+       - A successful DELETE request typically returns a 200 OK, or 204 No Content response code.
+       Request Headers
+       ```Cookie: loginToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2I3YWQ5YzgwN2JkNjJiNzlhMjhlNCIsInVzZXJuYW1lIjoidnJ1c2hhbmthbWluIiwiaWF0IjoxNjg2MTcwMDkzfQ.-6ON1g-AoszpoRjRsS2EF-usL0e2gswSjNylXZtxL_E```
     
     
 ## Features
