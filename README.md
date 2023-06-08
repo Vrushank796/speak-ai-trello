@@ -1,7 +1,5 @@
 # speak-ai-trello
-With the help of Trello integration you would be able to create, modify and delete cards across your team members.
-
-# Server - ExpressJS & NodeJS
+With the help of Trello integration you would be able to create, modify and delete cards across your team 
 
 ## Table of Contents
 
@@ -11,6 +9,7 @@ With the help of Trello integration you would be able to create, modify and dele
 - [Features](#features)
 
 ## Installation
+Used Angular v12 for frontend, and node version 14.
 
 1. Clone the repository:
 
