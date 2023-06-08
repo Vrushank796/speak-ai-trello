@@ -1,0 +1,33 @@
+<div class="relative isolate px-6 pt-20 lg:px-8">
+  <div>
+    <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+      My Cards
+    </h1>
+    <p class="mt-6 text-lg leading-8 text-gray-600">
+      With the help of Trello integration you would be able to create, modify
+      and delete cards across your team members.
+    </p>
+    <div class="mt-6">
+      <a
+        class="rounded-md bg-indigo-600 mx-2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+        routerLink="/create-card"
+      >
+        Create New Card
+      </a>
+    </div>
+    <div
+      class="flex flex-row flex-wrap gap-4 justify-center overflow-hidden my-5 mx-auto px-4 md:px-12"
+    >
+      <div *ngFor="let card of cards">
+        <app-card
+          [card]="{
+            id: card.id,
+            title: card.title,
+            description: card.description,
+            creationDate: card.creationDate
+          }"
+        ></app-card>
+      </div>
+    </div>
+  </div>
+</div>

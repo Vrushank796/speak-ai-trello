@@ -1,0 +1,77 @@
+<div class="relative isolate px-6 pt-20 lg:px-8">
+  <div class="bg-white p-10">
+    <a
+      class="my-4 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+      routerLink="/cards"
+    >
+      Back to Cards
+    </a>
+    <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+      Create New Card
+    </h1>
+    <div class="p-10">
+      <form (ngSubmit)="addCard()" [formGroup]="cardForm">
+        <div class="mb-3">
+          <label
+            for="title"
+            class="form-label block mb-2 text-md font-medium text-gray-900 dark:text-gray"
+            >Title</label
+          >
+          <input
+            type="text"
+            id="title"
+            class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            formControlName="title"
+            required
+          />
+          <div
+            *ngIf="
+              cardForm.controls['title'].invalid &&
+              (cardForm.controls['title'].dirty ||
+                cardForm.controls['title'].touched)
+            "
+            class="text-rose-500"
+          >
+            <div *ngIf="cardForm.controls['title'].errors?.['required']">
+              Title is required.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label
+            for="description"
+            class="form-label block mb-2 text-md font-medium text-gray-900 dark:text-gray"
+            >Description</label
+          >
+          <textarea
+            rows="4"
+            id="description"
+            class="bg-white block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            formControlName="description"
+            required
+          ></textarea>
+          <div
+            *ngIf="
+              cardForm.controls['description'].invalid &&
+              (cardForm.controls['description'].dirty ||
+                cardForm.controls['description'].touched)
+            "
+            class="text-rose-500"
+          >
+            <div *ngIf="cardForm.controls['description'].errors?.['required']">
+              Description is required.
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          [disabled]="!cardForm.valid"
+          class="cursor-pointer rounded-md bg-indigo-600 mx-2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

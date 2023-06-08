@@ -1,0 +1,21 @@
+<div class="bg-white relative isolate px-6 pt-20 lg:px-8">
+  <div class="bg-white p-10">
+    <a
+      class="my-4 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+      routerLink="/cards"
+    >
+      Back to Cards
+    </a>
+    <h1 class="text-xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+      Card Details
+    </h1>
+    <div class="p-10">
+      <div>Title:</div>
+      <div class="text-4xl mb-4">{{ cardDetail.title }}</div>
+      <div>Description:</div>
+      <div class="text-2xl">
+        {{ cardDetail.description }}
+      </div>
+    </div>
+  </div>
+</div>

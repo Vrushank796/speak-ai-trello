@@ -1,0 +1,27 @@
+<div
+  class="grow-0 w-96 h-40 overflow-hidden p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+>
+  <div class="cursor-pointer" (click)="displayCard()">
+    <h5
+      class="mb-2 truncate text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+    >
+      {{ card.title }}
+    </h5>
+
+    <p class="mb-3 truncate font-normal text-gray-700 dark:text-gray-400">
+      {{ card.description }}
+    </p>
+  </div>
+  <button
+    class="rounded-md bg-indigo-600 mx-2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+    (click)="updateCard(card.id)"
+  >
+    Edit
+  </button>
+  <button
+    class="rounded-md bg-indigo-600 mx-2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+    (click)="deleteCard(card.id)"
+  >
+    Delete
+  </button>
+</div>
