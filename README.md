@@ -101,7 +101,7 @@ To use Speak AI Trello:
      Request Headers
     ```Cookie: loginToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2I3YWQ5YzgwN2JkNjJiNzlhMjhlNCIsInVzZXJuYW1lIjoidnJ1c2hhbmthbWluIiwiaWF0IjoxNjg2MTcwMDkzfQ.-6ON1g-AoszpoRjRsS2EF-usL0e2gswSjNylXZtxL_E```
     
-    ``` json
+    ``` 
       {
         "title": "Verify Token and then allow resource modification", 
         "description": "Get id and save card data to DB"
