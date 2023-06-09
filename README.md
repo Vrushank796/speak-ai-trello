@@ -76,7 +76,7 @@ To use Speak AI Trello:
     - This is a GET request and it is used to "get" all the cards data from MongoDB. There is no request body for a GET request.
     - A successful GET response will have a 200 OK status, and should include some kind of response body - JSON data.
   - GET ```localhost:8000/api/card/{id}```
-    - This is a GET request and it is used to "get" all the cards data from MongoDB. There is no request body for a GET request.
+    - This is a GET request and it is used to "get" single card data by id from MongoDB. There is no request body for a GET request.
     - A successful GET response will have a 200 OK status, and should include some kind of response body - JSON data.
   - POST ```localhost:8000/api/card```
     - This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response. 
