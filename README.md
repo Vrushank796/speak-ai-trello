@@ -75,7 +75,7 @@ To use Speak AI Trello:
   - GET ``` localhost:8000/api/cards ```
     - This is a GET request and it is used to "get" all the cards data from MongoDB. There is no request body for a GET request.
     - A successful GET response will have a 200 OK status, and should include some kind of response body - JSON data.
-  - GET ```localhost:8000/api/card/64810e3dfea8f9480128d2f7```
+  - GET ```localhost:8000/api/card/{id}```
     - This is a GET request and it is used to "get" all the cards data from MongoDB. There is no request body for a GET request.
     - A successful GET response will have a 200 OK status, and should include some kind of response body - JSON data.
   - POST ```localhost:8000/api/card```
@@ -92,7 +92,7 @@ To use Speak AI Trello:
         "description": "Get id and save card data to DB"
       }
     ```
-   - PUT ```localhost:8000/api/card/6480f3a1bf3d150931d2e787```
+   - PUT ```localhost:8000/api/card/{id}```
      - This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. id=1).
      - First, it would update card using Trello API endpoint ```https://api.trello.com/1/cards/${cardId}?key=${APIKey}&token=${APIToken}``` and then update the card details in MongoDB database named **speakAiDB**, collection named **cards**.
      - A successful PUT request typically returns a 200 OK response code.
@@ -107,7 +107,7 @@ To use Speak AI Trello:
          }
        ```
     
-   - DELETE ```localhost:8000/api/card/6480ea782f7248e4e49d81d0```
+   - DELETE ```localhost:8000/api/card/{id}```
        - This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. id=1).
        - First, it would delete card using Trello API endpoint ```https://api.trello.com/1/cards/${cardId}?key=${APIKey}&token=${APIToken}``` and then delete the card details in MongoDB database named **speakAiDB**, collection named **cards**.
        - A successful DELETE request typically returns a 200 OK, or 204 No Content response code.
